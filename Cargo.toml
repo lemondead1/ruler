@@ -1,0 +1,10 @@
+[package]
+name = "ruler"
+version = "0.1.0"
+edition = "2021"
+
+
+[dependencies]
+cairo-rs = { version = "0.17.0", features = [ "xcb" ] }
+xcb = { version = "1.2.0", features = [ "shape", "render" ] }
+glam = "0.24.0"
