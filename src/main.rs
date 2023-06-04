@@ -524,7 +524,7 @@ fn draw(ctx: &Context, from: DVec2, to: DVec2) -> Result<(), Box<dyn Error>> {
         ctx.translate(-extents.width() / 2.0, 0.0);
         ctx.text_path(&str);
         ctx.translate(50.0 + extents.width() / 2.0, 0.0);
-        let visibility = ((length - i as f64) / 50.0).min(bg);
+        let visibility = ((length - i as f64) / 50.0).min(1.0);
         let color = accent * visibility + bg * (1.0 - visibility);
         ctx.set_source_rgba(color, color, color, opacity);
         ctx.fill()?;
